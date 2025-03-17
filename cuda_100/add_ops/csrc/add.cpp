@@ -6,7 +6,7 @@
 #include <torch/library.h>
 
 
-namespace day_01 {
+namespace add_ops {
 
     auto add_cpu(const at::Tensor& a, const at::Tensor& b) -> at::Tensor {
         TORCH_CHECK(a.is_cpu());
@@ -39,4 +39,4 @@ namespace day_01 {
         m.impl("add", &add_cpu);
     }
 
-} // namespace day_01
+} // namespace add_ops

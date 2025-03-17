@@ -8,7 +8,7 @@
 #include <cuda_runtime.h>
 
 
-namespace day_01 {
+namespace add_ops {
 
     template<typename T>
     __global__ void _add_cuda_kernel(

@@ -1,9 +1,9 @@
 #include <torch/extension.h>
 #include "add.h"
 
-namespace day_01 {
+namespace add_ops {
     PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
-        m.def("add_cpu", &day_01::add_cpu);
-        m.def("add_cuda", &day_01::add_cuda);
+        m.def("add_cpu", &add_ops::add_cpu);
+        m.def("add_cuda", &add_ops::add_cuda);
     }
 }

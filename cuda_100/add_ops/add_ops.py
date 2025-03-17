@@ -8,7 +8,7 @@ __all__ = ["backend"]
 CSRC_DIR = os.path.join(os.path.dirname(__file__), "csrc")
 
 backend = cpp_extension.load(
-    "day_01_add",
+    "add_ops",
     get_src_files(CSRC_DIR, "*.cpp") + get_src_files(CSRC_DIR, "*.cu"),
     extra_cflags=get_cxx_flags(),
     extra_cuda_cflags=get_nvcc_flags(),
