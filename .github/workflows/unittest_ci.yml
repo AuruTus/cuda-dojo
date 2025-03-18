@@ -1,0 +1,31 @@
+name: unittest ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-22.04
+    
+    container:
+      image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Verify PyTorch & CUDA
+        run: |
+          python -c "import torch; print(f'CUDA Available: {torch.cuda.is_available()}')"
+          python -c "import torch; print(f'CUDA Version: {torch.version.cuda}')"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Unittests
+        run: |
+          python -m unittest discover tests
