@@ -1,15 +1,24 @@
 name: unittest ci
 
+# currently no machine to run CUDA CI 😇
+
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
+
 on:
   push:
-    branches: [main]
+    branches: [ci-disabled]
   pull_request:
-    branches: [main]
+    branches: [ci-disabled]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
-    
+    env:
+      CUDA_HOME: /usr/local/cuda
     container:
       image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
