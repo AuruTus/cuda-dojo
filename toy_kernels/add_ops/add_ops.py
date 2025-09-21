@@ -1,7 +1,7 @@
 import os
 import torch
 from torch.utils import cpp_extension
-from cuda_100.utils import get_src_files, get_cxx_flags, get_nvcc_flags
+from toy_kernels.utils import get_src_files, get_cxx_flags, get_nvcc_flags
 
 __all__ = ["backend"]
 

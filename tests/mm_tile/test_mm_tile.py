@@ -1,7 +1,7 @@
 import torch
 import unittest
 from dataclasses import dataclass
-from cuda_100.matmul_tile import backend
+from toy_kernels.matmul_tile import backend
 
 device = torch.device("cuda")
 

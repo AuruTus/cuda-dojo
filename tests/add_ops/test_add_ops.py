@@ -1,5 +1,5 @@
 import torch
-from cuda_100.add_ops import add_ops
+from toy_kernels.add_ops import add_ops
 import unittest
 
 backend = add_ops.backend
