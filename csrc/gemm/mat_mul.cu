@@ -45,7 +45,6 @@ __global__ void matrix_multiplication_kernel(
     }
 
     if (row + threadIdx.y < M && col + threadIdx.x < K) {
-        // printf("row, col")
         C[(row + threadIdx.y) * K + col + threadIdx.x] = pvalue;
     }
 }
