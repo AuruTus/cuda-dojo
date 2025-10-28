@@ -1,6 +1,6 @@
 __global__ void reduce_cuda(
-    const float* input,
-    float* output,
+    const float* __restrict__ input,
+    float* __restrict__ output,
     int N
 ) {
     // for every first thread of each warps
