@@ -1,13 +1,7 @@
 #include <ATen/ATen.h>
-#include <ATen/Operators.h>
-#include <Python.h>
 #include <torch/all.h>
-#include <torch/library.h>
-
-#include <cuda.h>
 
 #include <cuda_runtime.h>
-#include <stdio.h>
 
 
 namespace reduce {
