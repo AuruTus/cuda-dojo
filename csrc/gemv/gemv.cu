@@ -242,9 +242,9 @@ void benchmark_gemv(int N, int V, int iterations = 1000) {
 
     std::cout << std::endl;
     std::cout << "Constant Memory Throughput: "
-        << (total_flops / (constant_time * 1e6)) << " GFLOP/s" << std::endl;
+        << (total_flops / (constant_time * 1e6)) << " MFLOP/s" << std::endl;
     std::cout << "Shared Memory Throughput:   "
-        << (total_flops / (shmem_time * 1e6)) << " GFLOP/s" << std::endl;
+        << (total_flops / (shmem_time * 1e6)) << " MFLOP/s" << std::endl;
 
     // Cleanup
     cudaEventDestroy(start);
