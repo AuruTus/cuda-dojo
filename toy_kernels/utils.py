@@ -30,7 +30,7 @@ def get_cxx_flags(
     debug_mode: bool = False,
 ) -> list[str]:
     return [
-        "-std=c++17",
+        "-std=c++20",
         "-O3" if not debug_mode else "-O0",
         "-g" if debug_mode else "",
     ]
